@@ -1,4 +1,3 @@
-// pages/new.tsx
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -29,7 +28,6 @@ export default function NewOrder() {
         const data = await res.json();
         throw new Error(data?.error || 'Ошибка');
       }
-      // go to orders list
       router.push('/');
     } catch (err: any) {
       setError(err.message || 'Error');

@@ -1,4 +1,3 @@
-// pages/index.tsx
 import useSWR from 'swr';
 import Link from 'next/link';
 
@@ -11,7 +10,7 @@ export default function OrdersPage() {
     try {
       const res = await fetch(`/api/orders/${id}/accept`, { method: 'POST' });
       if (!res.ok) throw new Error('Ошибка');
-      await mutate(); // refresh list
+      await mutate(); 
     } catch (err) {
       console.error(err);
       alert('Не удалось принять заказ');
