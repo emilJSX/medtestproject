@@ -17,9 +17,6 @@ export default function OrdersPage() {
     }
   }
 
-  if (error) return <div>Ошибка загрузки</div>;
-  if (!data) return <div>Загрузка...</div>;
-
   return (
     <main style={{ padding: 24, maxWidth: 900, margin: '0 auto' }}>
       <h1>Заказы</h1>
